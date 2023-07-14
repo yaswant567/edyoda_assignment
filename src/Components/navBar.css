@@ -1,0 +1,49 @@
+.Nav{
+    background-color: #FFF;
+    height: 53px;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 65px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Nav_left{
+    display: flex;
+    gap: 60px;
+}
+.Nav_left_logo{
+    align-self: center;
+    padding: 2px;
+    background: linear-gradient(122deg, #0096FF 42.14%, #0048FF 96.70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: boolder;
+    line-height: normal;
+}
+.Nav_left_course{
+    display: flex;
+    align-items: center;
+    font-weight: 100px;
+    padding: 2px;
+    gap: 5px;
+}
+.Nav_left_program{
+
+}
+
+.Nav_right{
+}
+
+.arrow{
+    padding-top: 5px;
+    justify-self: center;
+}
