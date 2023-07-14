@@ -1,6 +1,7 @@
 import React from 'react';
 import "./navBar.css";
-import { ReactComponent as Arrow } from '../Assets/Icon Chevron Down.svg';
+import { ReactComponent as ArrowIcon } from '../Assets/Icon Chevron Down.svg';
+import { ReactComponent as SearchIcon } from '../Assets/Search Icon.svg';
 
 
 const NavBar = () => {
@@ -13,22 +14,25 @@ const NavBar = () => {
             <div className='Nav_left_course'>
                 Courses
                 <span className='arrow'>
-                    <Arrow/>
+                    <ArrowIcon/>
                 </span>
             </div>
             <div className='Nav_left_program'>
-
+                Programs
+                <span className='arrow'>
+                    <ArrowIcon/>
+                </span>
             </div>
         </div>
         <div className='Nav_right'>
-            <div className='nav_right_search'>
-
+            <div className='Nav_right_search'>
+                <SearchIcon/>
             </div>
-            <div className='nav_right_login'>
-
+            <div className='Nav_right_login'>
+                Log in
             </div>
-            <div className='nav_right_join'>
-
+            <div className='Nav_right_joinNow'>
+                <button>JOIN NOW</button>
             </div>
         </div>
     </div>

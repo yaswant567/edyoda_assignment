@@ -1,7 +1,7 @@
 .Nav{
     background-color: #FFF;
     height: 53px;
-    width: 90vw;
+    width: 91vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -35,12 +35,49 @@
     font-weight: 100px;
     padding: 2px;
     gap: 5px;
+    cursor: pointer;
 }
 .Nav_left_program{
-
+    display: flex;
+    align-items: center;
+    font-weight: 100px;
+    padding: 2px;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .Nav_right{
+    display: flex;
+    gap: 60px;
+}
+.Nav_right_search{
+    align-self: center;
+    cursor: pointer;
+    padding-top: 5px;
+}
+.Nav_right_login{
+    align-self: center;
+    cursor: pointer;
+}
+.Nav_right_joinNow{
+    align-self: center;
+    cursor: pointer;
+
+}
+button{
+    background-color: transparent;
+    color: #FFF;
+    border: none;
+    border-radius: 52px;
+    display: flex;
+    height: 40px;
+    background: linear-gradient(224deg, #0048FF 0%, #0096FF 100%);
+    padding: 10px 42px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 .arrow{
