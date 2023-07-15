@@ -1,3 +1,122 @@
 .Pay{
-    color: white;
+    color: #FFF;
+    box-sizing: border-box;
+    width: 100%;
+    height: 99%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+}
+
+
+.Pay_left{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 86vh;
+    padding-left: 8%;
+    padding-top: 3%;
+    gap: 3rem;
+}
+.Pay_left_detail_offer{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    font-size: 2.5rem;
+}
+.red{
+    position: relative;
+    display: inline-block;
+    font-weight: bolder;
+}
+
+.red::after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #F00;
+    transform-origin: top left;
+    transform: scaleY(2.5); /* Adjust the scale value as needed */
+  }
+  .text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .offer{
+    color: #0096FF;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 32px */
+    letter-spacing: 0.96px;
+  }
+
+.Pay_left_detail{
+    display: flex;
+}
+.detail1_a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Pay_left_detail{
+    display: flex;
+    align-items: center;
+    word-spacing: 5px;
+    justify-self: center;
+    gap: 50px;
+    color: #FFF;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.96px;
+}
+.blue{
+    color: #0096FF;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 32px */
+    letter-spacing: 0.96px;
+}
+.detail1_b{
+    display: flex;
+}
+
+
+/* ----------------------------Right Side - subscription Plans-------------------------------------------------------------  */
+
+.Pay_right{
+    width: 50%;
+    box-sizing: border-box;
+    color: black;
+    padding: 2% 10%;
+    padding-right: 5%;
+    padding-left: 10%;
+}
+
+.Pay_right_subscription{
+    background-color: #FFFFFF;
+    height: 100%;
+    margin-left: 20%;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+}
+.Pay_right_subscription_progressBar{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+.progressBar_SignUp{
+    display: flex;
+    flex-direction: column;
 }

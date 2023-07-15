@@ -1,5 +1,4 @@
 import './app.css';
-import "./Components/NavBar";
 import NavBar from './Components/NavBar';
 import Payment from './Components/Payment';
 
