@@ -17,8 +17,7 @@ const Payment = () => {
 
   const handleChange = (event) =>{
 
-    const labels = document.querySelectorAll('.subscription_plan','.subscription_plan2');
-    
+    const labels = document.querySelectorAll('.subscription_plan', '.subscription_plan2');
     labels.forEach(label => {
       label.classList.remove('green');
     });
@@ -93,7 +92,7 @@ const Payment = () => {
             </div>
 
             <div className='Pay_right_subscription_plans'>
-              <label className='subscription_plan1' onChange={handleChange}>
+              <label className={`subscription_plan1 ${selectedPlan === 'plan1' ? 'green' : ''}`} onChange={handleChange}>
                 <div className='plan1_expired'>
                   Offer expired
                 </div>
@@ -107,7 +106,7 @@ const Payment = () => {
                 </div>
               </label>
 
-              <label className='subscription_plan2'>
+              <label className={`subscription_plan2 ${selectedPlan === 'plan2' ? 'green' : ''}`} onChange={handleChange}>
                 <div className='plan2_Recommended'>
                   Recommended
                 </div>
@@ -132,7 +131,7 @@ const Payment = () => {
                 </div>
               </label>
 
-              <label className='subscription_plan' onChange={handleChange}>
+              <label className="subscription_plan" onChange={handleChange}>
                 <div className='plan'>
                   <input type='radio' name='radioInput' value="plan4" onChange={handleChange}/>
                   <div className='plan_details'> 
