@@ -16,7 +16,16 @@ const Payment = () => {
   const[discount, setDiscount] = useState(18401);
 
   const handleChange = (event) =>{
-    setSelectedPlan(event.target.value);
+
+    const labels = document.querySelectorAll('.subscription_plan','.subscription_plan2');
+    
+    labels.forEach(label => {
+      label.classList.remove('green');
+    });
+
+    event.currentTarget.classList.add('green');
+
+
     const planAmount = event.target.parentNode.querySelector('.plan_amount');
     const yearlyAmount = planAmount.querySelector('span:nth-child(1)').textContent;
     // const monthlyAmount = planAmount.querySelector('span:nth-child(2)').textContent;
