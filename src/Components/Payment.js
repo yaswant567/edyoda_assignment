@@ -9,19 +9,25 @@ import { ReactComponent as Clock } from '../Assets/Icon Clock.svg';
 import { ReactComponent as RadioButton } from '../Assets/Radio Button.svg';
 
 
+
 const Payment = () => {
 
-  const[selectedPlan, setSelectedPlan] = useState('');
+  const[selectedPlan, setSelectedPlan] = useState(0);
+  const[discount, setDiscount] = useState(18401);
 
   const handleChange = (event) =>{
-    console.log(event.target.value);
+    setSelectedPlan(event.target.value);
     const planAmount = event.target.parentNode.querySelector('.plan_amount');
     const yearlyAmount = planAmount.querySelector('span:nth-child(1)').textContent;
-    const monthlyAmount = planAmount.querySelector('span:nth-child(2)').textContent;
+    // const monthlyAmount = planAmount.querySelector('span:nth-child(2)').textContent;
 
-    const totalAmountValue = parseInt(yearlyAmount.replace(/[₹,]/g, ''), 10);
-    const monthlyAmountValue = parseInt(monthlyAmount.replace(/[₹,]/g, ''), 10);
-    selectedPlan(totalAmountValue);
+    const match = yearlyAmount.match(/\d+/);
+    const totalAmountValue = match ? parseInt(match[0], 10) : null;
+    // const monthlyAmountValue = parseInt(monthlyAmount.replace(/[₹,]/g, ''), 10);
+    const offerDiscount = (18500 - totalAmountValue);
+
+    setSelectedPlan(totalAmountValue);
+    setDiscount(offerDiscount);
 
   }
 
@@ -78,55 +84,55 @@ const Payment = () => {
             </div>
 
             <div className='Pay_right_subscription_plans'>
-              <div className='subscription_plan'>
+              <label className='subscription_plan1' onChange={handleChange}>
                 <div className='plan1_expired'>
                   Offer expired
                 </div>
                 <div className='plan'>
-                  <input type='radio' name='radioInput' onChange={handleChange} disabled/>
+                  <input type='radio' name='radioInput' value="plan1" onChange={handleChange} disabled/>
                   <div className='plan_details'>
                     <span>12 Months subscription</span>
-                    <span className='plan_amount'><span>Total ₹99</span><span>₹8 /mo</span></span>
+                    <span className='plan_amount'><span className='yr'>Total ₹99</span><span className='mr'>₹8 /mo</span></span>
                   </div>
                   
                 </div>
-              </div>
+              </label>
 
-              <div className='subscription_plan'>
-                <div className='plan1_expired'>
-                  Offer expired
+              <label className='subscription_plan2'>
+                <div className='plan2_Recommended'>
+                  Recommended
                 </div>
                 <div className='plan'>
-                  <input type='radio' name='radioInput' onChange={handleChange}/>
+                  <input type='radio' name='radioInput' value="plan2" onChange={handleChange}/>
                   <div className='plan_details'>
                     <span>12 Months subscription</span>
-                    <span className='plan_amount'><span>Total ₹99</span><span>₹8 /mo</span></span>
+                    <span className='plan_amount'><span className='yr'>Total ₹179</span><span className='mr'>₹15 /mo</span></span>
                   </div>
                   
                 </div>
-              </div>
+              </label>
 
-              <div className='subscription_plan'>
+              <label className='subscription_plan' onChange={handleChange}>
                 <div className='plan'>
-                  <input type='radio' name='radioInput' onChange={handleChange}/>
+                  <input type='radio' name='radioInput' value="plan3" onChange={handleChange}/>
                   <div className='plan_details'>
                     <span>6 Months subscription</span>
-                    <span className='plan_amount'><span>Total ₹99</span><span>₹8 /mo</span></span>
+                    <span className='plan_amount'><span className='yr'>Total ₹149</span><span className='mr'>₹25 /mo</span></span>
                   </div>
                   
                 </div>
-              </div>
+              </label>
 
-              <div className='subscription_plan'>
+              <label className='subscription_plan' onChange={handleChange}>
                 <div className='plan'>
-                  <input type='radio' name='radioInput' onChange={handleChange}/>
+                  <input type='radio' name='radioInput' value="plan4" onChange={handleChange}/>
                   <div className='plan_details'> 
                     <span>3 Months subscription</span>
-                    <span className='plan_amount'><span>Total ₹99</span><span>₹8 /mo</span></span>
+                    <span className='plan_amount'><span className='yr'>Total ₹99</span><span className='mr'>₹33 /mo</span></span>
                   </div>
                   
                 </div>
-              </div>
+              </label>
 
             </div>
 
@@ -139,17 +145,30 @@ const Payment = () => {
               <div className='subscription_Offer'>
                 <div className='limited_offer'>
                   <span className='limited_offer_text'>Limited time offer</span>
-                  <span>-{selectedPlan}</span>
+                  <span><b>-</b> ₹{discount}</span>
                 </div>
                 <div className='subscription_time'>
                   <Clock/>
                   <span className='offer_time'>Offer valid till 25th March 2023 </span>
                 </div>
               </div>
+
+              <div className='total'>
+                <span><b>Total</b>(Incl. of 18% GST)</span>
+                <span className='total_amount'>₹{selectedPlan}</span>
+              </div>
             </div>
 
+            <div className='submit'>
+              <div className='cancel'><button className='cancel1'><b>CANCEL</b></button></div>
+              <div className='proceed'><button className='proceed1'><b>PROCEED TO PAY</b></button></div>
+            </div>
+            <div className='container'>
+              <div className='frame'></div>
+            </div>
           </div>
         </div>
+        
     </div>
   )
 }

@@ -106,7 +106,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6%;
+    gap: 3%;
     padding: 20px 0px;
 }
 .Pay_right_subscription_progressBar{
@@ -132,21 +132,84 @@
     background-color: #0096FF;
 }
 
+.Pay_right_subscription_text{
+    color: #3C4852;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125.303%; 
+}
+
 .Pay_right_subscription_plans{
     width: 93%;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
+
+.plan1_expired{
+    width: 15%;
+    color: #FFF;
+    font-size: 10px;
+    border-radius: 0px 0px 4px 4px;
+    background: #F77171;
+    display: flex;
+    padding: 1px 19px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.plan2_Recommended{
+    width: 15%;
+    color: #FFF;
+    font-size: 10px;
+    border-radius: 0px 0px 4px 4px;
+    background: #47BA68;
+    display: flex;
+    padding: 1px 19px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.yr{
+    font-weight: 600;
+}
+.mr{
+    font-size: 12px;
+}
+.subscription_plan1{
+    border-radius: 4px;
+    border: 2.2px solid #BEBEBE;
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    background: #E7E7E7;
+    cursor: pointer;
+}
+.subscription_plan2{
+    border-radius: 4px;
+    border: 2.2px solid #BEBEBE;
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    cursor: pointer;
+}
 .subscription_plan{
     border-radius: 4px;
-    border: 2px solid #BEBEBE;
-    height: 66px;
+    border: 2.2px solid #BEBEBE;
+    height: 58px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0px 15px;
+    cursor: pointer;
 }
-.plan{
+.plan, .plan1{
     display: flex;
     box-sizing: border-box;
     gap: 10px;
@@ -174,19 +237,44 @@ input[type="radio"]{
     flex-direction: column;
     width: 88%;
     border-top: 2px solid #BEBEBE;
-    padding: 3%;
+    padding: 3% 0% 3%;
     gap: 10px;
 }
 .subcription_Fee{
     width: 95%;
     display: flex;
+    margin-left: 20px;
     justify-content: space-between;
+
+    color: #3C4852;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 120%;
+}
+.subscription_Offer{
+    height: 50px;
+    width: 97%;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-image: linear-gradient(135deg, #DE4313 0%, #DE4313 0.75%, #DE4313 2.92%, #DE4414 6.37%, #DF4515 10.97%, #DF4816 16.59%, #E04B18 23.10%, #E1501B 30.37%, #E3561F 38.27%, #E55E24 46.66%, #E7682B 55.41%, #EB7533 64.39%, #EE843C 73.47%, #F39547 82.52%, #F8A954 91.41%, #FEC163 100%) 1;
+    border-image-slice: 31;
+    background: linear-gradient(135deg, rgba(222, 67, 19, 0.20) 0%, rgba(222, 67, 19, 0.20) 0.75%, rgba(222, 67, 19, 0.20) 2.92%, rgba(222, 68, 20, 0.20) 6.37%, rgba(223, 69, 21, 0.20) 10.97%, rgba(223, 72, 22, 0.20) 16.59%, rgba(224, 75, 24, 0.20) 23.10%, rgba(225, 80, 27, 0.20) 30.37%, rgba(227, 86, 31, 0.20) 38.27%, rgba(229, 94, 36, 0.20) 46.66%, rgba(231, 104, 43, 0.20) 55.41%, rgba(235, 117, 51, 0.20) 64.39%, rgba(238, 132, 60, 0.20) 73.47%, rgba(243, 149, 71, 0.20) 82.52%, rgba(248, 169, 84, 0.20) 91.41%, rgba(254, 193, 99, 0.20) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 18px;
+    padding-right: 0px;
 }
 
 .limited_offer{
     display: flex;
     justify-content: space-between;
     width: 95%;
+    color: #3C4852;
 }
 .limited_offer_text{
     color: #DE4313;
@@ -196,14 +284,11 @@ input[type="radio"]{
     font-weight: 600;
     line-height: 120%; /* 19.2px */
 }
-
-.subscription_Offer{
-    border-radius: 8px;
-    background: linear-gradient(135deg, rgba(222, 67, 19, 0.20) 0%, rgba(222, 67, 19, 0.20) 0.75%, rgba(222, 67, 19, 0.20) 2.92%, rgba(222, 68, 20, 0.20) 6.37%, rgba(223, 69, 21, 0.20) 10.97%, rgba(223, 72, 22, 0.20) 16.59%, rgba(224, 75, 24, 0.20) 23.10%, rgba(225, 80, 27, 0.20) 30.37%, rgba(227, 86, 31, 0.20) 38.27%, rgba(229, 94, 36, 0.20) 46.66%, rgba(231, 104, 43, 0.20) 55.41%, rgba(235, 117, 51, 0.20) 64.39%, rgba(238, 132, 60, 0.20) 73.47%, rgba(243, 149, 71, 0.20) 82.52%, rgba(248, 169, 84, 0.20) 91.41%, rgba(254, 193, 99, 0.20) 100%);
-}
 .subscription_time{
     display: flex;
     align-items: center;
+    flex-direction: row;
+    width: 95%;
     gap: 5px;
 }
 .offer_time{
@@ -213,4 +298,69 @@ input[type="radio"]{
     font-style: normal;
     font-weight: 450;
     line-height: 120%; /* 16.8px */
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    color: #3C4852;
+    margin-left: 20px;
+}
+.total_amount{
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+
+
+/* ----------------------------Right Side - Submit Buttons-------------------------------------------------------------  */
+
+.submit{
+    width: 90%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cancel{
+    width: 45%;
+    height: 100%;
+    border-radius: 4px;
+    border: 2px solid #F77171;
+    color: #F77171;
+}
+.cancel1{
+    color: #F77171;
+    
+}
+.proceed{
+    width: 45%;
+    height: 100%;
+    border-radius: 4px;
+    background: #47BA68;
+}
+.proceed1{
+    color: #FFFFFF;
+}
+button{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.container{
+    width: 100%;
+}
+.frame{
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
+    background: url('../Assets/Frame\ 12537.png'), lightgray 50% / cover no-repeat;
+    margin-left: 5%;
 }

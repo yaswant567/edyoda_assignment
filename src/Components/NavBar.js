@@ -32,7 +32,7 @@ const NavBar = () => {
                 Log in
             </div>
             <div className='Nav_right_joinNow'>
-                <button>JOIN NOW</button>
+                <button className='Navbutton'>JOIN NOW</button>
             </div>
         </div>
     </div>
