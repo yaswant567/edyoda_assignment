@@ -1,14 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './payment.css'
 import { ReactComponent as Detail1 } from '../Assets/Group 20.svg';
 import { ReactComponent as Detail2 } from '../Assets/Group 19.svg';
 import { ReactComponent as Detail3 } from '../Assets/Vector.svg';
 import { ReactComponent as Detail4 } from '../Assets/Group 17.svg';
 import { ReactComponent as Detail5 } from '../Assets/Vector_ads.svg';
-
+import { ReactComponent as Clock } from '../Assets/Icon Clock.svg';
+import { ReactComponent as RadioButton } from '../Assets/Radio Button.svg';
 
 
 const Payment = () => {
+
+  const[selectedPlan, setSelectedPlan] = useState('');
+
+  const handleChange = (event) =>{
+    console.log(event.target.value);
+    const planAmount = event.target.parentNode.querySelector('.plan_amount');
+    const yearlyAmount = planAmount.querySelector('span:nth-child(1)').textContent;
+    const monthlyAmount = planAmount.querySelector('span:nth-child(2)').textContent;
+
+    const totalAmountValue = parseInt(yearlyAmount.replace(/[₹,]/g, ''), 10);
+    const monthlyAmountValue = parseInt(monthlyAmount.replace(/[₹,]/g, ''), 10);
+    selectedPlan(totalAmountValue);
+
+  }
+
+
+
   return (
     <div className='Pay'>
 
@@ -45,12 +63,12 @@ const Payment = () => {
         <div className='Pay_right'>
           <div className='Pay_right_subscription'>
             <div className='Pay_right_subscription_progressBar'>
-              <div className='progressBar_SignUp'>
-                <span className='1'>1</span>
+              <div className='progressBar'>
+                <span className='a'>1</span>
                 Sign Up
               </div>
-              <div className='progressBar_Subscribe'>
-                <span className='2'>2</span>
+              <div className='progressBar'>
+                <span className='a'>2</span>
                 Subscribe
               </div>
             </div>
@@ -60,17 +78,72 @@ const Payment = () => {
             </div>
 
             <div className='Pay_right_subscription_plans'>
-              <div className='plan1'>
+              <div className='subscription_plan'>
                 <div className='plan1_expired'>
-                  expired
+                  Offer expired
                 </div>
                 <div className='plan'>
-                  <input type='radio'/>
-                  <div>
+                  <input type='radio' name='radioInput' onChange={handleChange} disabled/>
+                  <div className='plan_details'>
                     <span>12 Months subscription</span>
-                    <span className='amount'><span>Total ₹99</span><span>₹8 /mo</span></span>
+                    <span className='plan_amount'><span>Total ₹99</span><span>₹8 /mo</span></span>
                   </div>
                   
+                </div>
+              </div>
+
+              <div className='subscription_plan'>
+                <div className='plan1_expired'>
+                  Offer expired
+                </div>
+                <div className='plan'>
+                  <input type='radio' name='radioInput' onChange={handleChange}/>
+                  <div className='plan_details'>
+                    <span>12 Months subscription</span>
+                    <span className='plan_amount'><span>Total ₹99</span><span>₹8 /mo</span></span>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <div className='subscription_plan'>
+                <div className='plan'>
+                  <input type='radio' name='radioInput' onChange={handleChange}/>
+                  <div className='plan_details'>
+                    <span>6 Months subscription</span>
+                    <span className='plan_amount'><span>Total ₹99</span><span>₹8 /mo</span></span>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <div className='subscription_plan'>
+                <div className='plan'>
+                  <input type='radio' name='radioInput' onChange={handleChange}/>
+                  <div className='plan_details'> 
+                    <span>3 Months subscription</span>
+                    <span className='plan_amount'><span>Total ₹99</span><span>₹8 /mo</span></span>
+                  </div>
+                  
+                </div>
+              </div>
+
+            </div>
+
+            <div className='Pay_right_subscription_Fee'>
+              <div className='subcription_Fee'>
+                <span>Subcription Fee</span>
+                <span>₹18,500</span>
+              </div>
+
+              <div className='subscription_Offer'>
+                <div className='limited_offer'>
+                  <span className='limited_offer_text'>Limited time offer</span>
+                  <span>-{selectedPlan}</span>
+                </div>
+                <div className='subscription_time'>
+                  <Clock/>
+                  <span className='offer_time'>Offer valid till 25th March 2023 </span>
                 </div>
               </div>
             </div>

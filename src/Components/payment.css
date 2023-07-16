@@ -2,7 +2,7 @@
     color: #FFF;
     box-sizing: border-box;
     width: 100%;
-    height: 99%;
+    height: 100vh;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
 }
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     width: 90%;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 .red{
     position: relative;
@@ -90,12 +90,12 @@
 /* ----------------------------Right Side - subscription Plans-------------------------------------------------------------  */
 
 .Pay_right{
-    width: 50%;
+    width: 60%;
     box-sizing: border-box;
     color: black;
     padding: 2% 10%;
     padding-right: 5%;
-    padding-left: 10%;
+    padding-left: 7%;
 }
 
 .Pay_right_subscription{
@@ -105,18 +105,112 @@
     border-radius: 1%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 6%;
+    padding: 20px 0px;
 }
 .Pay_right_subscription_progressBar{
     display: flex;
-    width: 70%;
+    width: 60%;
     align-items: center;
     justify-content: center;
     justify-content: space-between;
 }
-.progressBar_SignUp{
+.progressBar{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+.a{
+    border-radius: 1000px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0096FF;
+}
+
+.Pay_right_subscription_plans{
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.subscription_plan{
+    border-radius: 4px;
+    border: 2px solid #BEBEBE;
+    height: 66px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.plan{
+    display: flex;
+    box-sizing: border-box;
+    gap: 10px;
+}
+.plan_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+.plan_amount{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="radio"]{
+    transform: scale(2);
+    cursor: pointer;
+}
+
+
+.Pay_right_subscription_Fee{
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    border-top: 2px solid #BEBEBE;
+    padding: 3%;
+    gap: 10px;
+}
+.subcription_Fee{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.limited_offer{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.limited_offer_text{
+    color: #DE4313;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 19.2px */
+}
+
+.subscription_Offer{
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(222, 67, 19, 0.20) 0%, rgba(222, 67, 19, 0.20) 0.75%, rgba(222, 67, 19, 0.20) 2.92%, rgba(222, 68, 20, 0.20) 6.37%, rgba(223, 69, 21, 0.20) 10.97%, rgba(223, 72, 22, 0.20) 16.59%, rgba(224, 75, 24, 0.20) 23.10%, rgba(225, 80, 27, 0.20) 30.37%, rgba(227, 86, 31, 0.20) 38.27%, rgba(229, 94, 36, 0.20) 46.66%, rgba(231, 104, 43, 0.20) 55.41%, rgba(235, 117, 51, 0.20) 64.39%, rgba(238, 132, 60, 0.20) 73.47%, rgba(243, 149, 71, 0.20) 82.52%, rgba(248, 169, 84, 0.20) 91.41%, rgba(254, 193, 99, 0.20) 100%);
+}
+.subscription_time{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.offer_time{
+    color: #DE4313;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 120%; /* 16.8px */
 }
