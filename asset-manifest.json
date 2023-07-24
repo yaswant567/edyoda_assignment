@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/edyoda_assignment/static/css/main.6dbd9935.css",
+    "main.js": "/edyoda_assignment/static/js/main.60c378ca.js",
+    "static/media/Back Ground.png": "/edyoda_assignment/static/media/Back Ground.a724fb7f54fab5e7455e.png",
+    "static/media/Group 20.svg": "/edyoda_assignment/static/media/Group 20.256958ab1c036e9e8521b0ea1e8b91ae.svg",
+    "static/media/Group 17.svg": "/edyoda_assignment/static/media/Group 17.2683319b901ca47cfc3971d341ffc0d4.svg",
+    "static/media/Vector.svg": "/edyoda_assignment/static/media/Vector.99f9cca18be9e57a2b870ad623bf8b23.svg",
+    "static/media/Radio Button.svg": "/edyoda_assignment/static/media/Radio Button.69b8c8cf60eafadca39c2fd78cc21887.svg",
+    "static/media/Group 19.svg": "/edyoda_assignment/static/media/Group 19.15c22aff1a202021f5861e98221e1e2c.svg",
+    "static/media/Search Icon.svg": "/edyoda_assignment/static/media/Search Icon.00bdc170526c9bed9cef68c38c5893f8.svg",
+    "static/media/Vector_ads.svg": "/edyoda_assignment/static/media/Vector_ads.33736542674291cae82f8dadef293263.svg",
+    "index.html": "/edyoda_assignment/index.html",
+    "static/media/Icon Clock.svg": "/edyoda_assignment/static/media/Icon Clock.5d6adf0cfbd2ebbf7e486ea5d883f312.svg",
+    "static/media/Icon Chevron Down.svg": "/edyoda_assignment/static/media/Icon Chevron Down.f7ed9803173a26db7c2950548544376b.svg",
+    "main.6dbd9935.css.map": "/edyoda_assignment/static/css/main.6dbd9935.css.map",
+    "main.60c378ca.js.map": "/edyoda_assignment/static/js/main.60c378ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6dbd9935.css",
+    "static/js/main.60c378ca.js"
+  ]
+}
