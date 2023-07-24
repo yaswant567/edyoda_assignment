@@ -380,3 +380,25 @@ button{
     position: inherit;
     margin-left: 5%;
 }
+
+
+@media screen and (max-width: 1130px)
+{
+    .Pay{
+        display: flex;
+        flex-direction: column;
+        height: 500%;
+        justify-content: center;
+        scroll-behavior: auto;
+    }
+    .Pay_left{
+        width: 60%;
+        height:50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .Pay_right{
+        width: 80%;
+        height: 50%;
+    }
+}
